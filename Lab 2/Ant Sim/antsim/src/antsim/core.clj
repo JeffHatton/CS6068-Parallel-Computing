@@ -26,8 +26,11 @@
 ;evaporation rate
 (def evap-rate 0.99)
 
+(def pherFoodDrop 3)
+(def noPherDrop 1)
+(def FoodReturned (atom false)) 
 (def animation-sleep-ms 100)
-(def ant-sleep-ms 1000)
+(def ant-sleep-ms 100)
 (def evap-sleep-ms 1000)
 
 (def running true)
@@ -70,14 +73,14 @@
      (for [x home-range y home-range]
        (do	   
          (alter (place [x y]) 
-                assoc :home true)
-		 (print home-range)
+                assoc :home true)		 
 		 (let [offX (- x home-off)]
 		 (let [offY (- y home-off)]
-		 (if (or (= offX 0) (= offX (- nants-sqrt 1)) (= offY 0) (= offY (- nants-sqrt 1))) (create-ant [x y] (rand-int 8) 0) (create-ant [x y ] (rand-int 8) 1))))
+		 (if (or (= offX 0) (= offX (- nants-sqrt 1)) (= offY 0) (= offY (- nants-sqrt 1))) 
+       (create-ant [x y] (rand-int 8) 0)
+       (create-ant [x y ] (rand-int 8) 1))))
 		 
 		 )))))
-         ;;(create-ant [x y] (rand-int 8))
 
 (defn bound 
   "returns n wrapped into range 0-b"
@@ -116,36 +119,29 @@
     (let [[dx dy] (dir-delta (bound 8 dir))]
       [(bound dim (+ x dx)) (bound dim (+ y dy))]))
 
-;(defmacro dosync [& body]
-;  `(sync nil ~@body))
-
-;ant agent functions
-;an ant agent tracks the location of an ant, and controls the behavior of 
-;the ant at that location
-
 (defn turn 
   "turns the ant at the location by the given amount"
   [loc amt]
     (dosync
      (let [p (place loc)
-           ant (:ant @p)]
+           ant (:ant @p)]      
        (alter p assoc :ant (assoc ant :dir (bound 8 (+ (:dir ant) amt))))))
     loc)
 
 (defn move 
   "moves the ant in the direction it is heading. Must be called in a
   transaction that has verified the way is clear"
-  [loc]
+  [loc pherAmount]
      (let [oldp (place loc)
            ant (:ant @oldp)
            newloc (delta-loc loc (:dir ant))
            p (place newloc)]
-         ;move the ant
+       ;move the ant
        (alter p assoc :ant ant)
        (alter oldp dissoc :ant)
          ;leave pheromone trail
        (when-not (:home @oldp)
-         (alter oldp assoc :pher (inc (:pher @oldp))))
+         (alter oldp assoc :pher (+ (:pher @oldp) pherAmount)))
        newloc))
 
 (defn take-food [loc]
@@ -162,80 +158,149 @@
   "Drops food at current location. Must be called in a
   transaction that has verified the ant has food"
   (let [p (place loc)
-        ant (:ant @p)]    
+        ant (:ant @p)]
+    ;; Allow hauler ants to leave nest
+    (if (deref FoodReturned) () (swap! FoodReturned (fn [%] true)))    
     (alter p assoc 
            :food (inc (:food @p))
-           :ant (dissoc ant :food))
+           :ant (dissoc ant :food))    
     loc))
 
 (defn rank-by 
   "returns a map of xs to their 1-based rank when sorted by keyfn"
-  [keyfn xs]
-  (let [sorted (sort-by (comp float keyfn) xs)]
-    (reduce (fn [ret i] (assoc ret (nth sorted i) (inc i)))
+  [keyfn xs ascending]
+  (let [sorted (if ascending (sort-by (comp float keyfn) xs) (reverse (sort-by (comp float keyfn) xs)))]  
+      (reduce (fn [ret i] (assoc ret (nth sorted i) (inc i)))
             {} (range (count sorted)))))
 
-(defn TypeZeroBehave
-    "The behavior function for the type 0 ant"
+(defn GetPherLevel
+	"Returns the pheromones at the passed location"
+	[loc]
+	(let [pla (place loc)] (:pher @pla)))
+
+(defn getAveragePherLevels
+	"Get the average Pheromones in an area"
+	[intialX intialY xSearchSize ySearchSize dir]
+	(let [[dx dy] (dir-delta (bound 8 dir))]
+		(let [x (reduce + (map GetPherLevel 
+                         (for [currentXDir (range 0 xSearchSize) currentYDir (range 0 ySearchSize)] 
+                              [(min (max (+ intialX (* currentXDir dx)) 0) (- dim 1)) 
+                               (min (max (+ intialY (* currentYDir dy)) 0) (- dim 1))])))]
+            (/ x (* xSearchSize ySearchSize)))))
+
+(defn checkPerCell
+	"Get the average Pheromones in an area"
+	[locDir]	
+ (let [[loc dir] locDir]
+	 (let [pla (place loc)]	
+	  (getAveragePherLevels (get loc 0) (get loc 1) 3 3 dir))))
+			
+(defn TypeSeekerBehave
+    "The behavior function for the Seeker ant"
 	[loc ant]
 	(let [p (place loc)
         ant (:ant @p)
         ahead (place (delta-loc loc (:dir ant)))
         ahead-left (place (delta-loc loc (dec (:dir ant))))
         ahead-right (place (delta-loc loc (inc (:dir ant))))
-        places [ahead ahead-left ahead-right]]	
-    ;;(dosync
-     ;;(when running
-       ;;(send-off *agent* #'behave))
-     (if (:food ant)
+        places [ahead ahead-left ahead-right]	
+		    placesz [[(delta-loc loc (:dir ant)) (:dir ant)] [(delta-loc loc (dec (:dir ant))) (:dir ant)] [(delta-loc loc (inc (:dir ant))) (:dir ant)]]]
+   (if (:food ant)
        ;going home
-       (cond 
+     (cond 
         (:home @p)                              
           (-> loc drop-food (turn 4))
         (and (:home @ahead) (not (:ant @ahead))) 
-          (move loc)
+          (move loc pherFoodDrop)
         :else
           (let [ranks (merge-with + 
-                        (rank-by (comp #(if (:home %) 1 0) deref) places)
-                        (rank-by (comp :pher deref) places))]
-          (([move #(turn % -1) #(turn % 1)]
+                        (rank-by (comp #(if (:home %) 1 0) deref) places true)
+                        (rank-by (comp :pher deref) places true))]
+          (([#(move % pherFoodDrop) #(turn % -1) #(turn % 1)]
             (wrand [(if (:ant @ahead) 0 (ranks ahead)) 
                     (ranks ahead-left) (ranks ahead-right)]))
            loc)))
-       ;foraging
-       (cond 
+     ;foraging
+     (cond 
         (and (pos? (:food @p)) (not (:home @p))) 
           (-> loc take-food (turn 4))
         (and (pos? (:food @ahead)) (not (:home @ahead)) (not (:ant @ahead)))
-          (move loc)
+          (move loc pherFoodDrop)
+      :else	      
+			(let [foodCells (merge-with concat (rank-by (comp :food deref) places true))]
+			  (if (> (:food @(key (apply max-key val foodCells))) 0) 
+          ;; Food found go to it
+          (([#(move % noPherDrop) #(turn % -1) #(turn % 1)]
+				     (wrand [(if (:ant @ahead) 0 (foodCells ahead)) 
+                     (foodCells ahead-left) 
+                     (foodCells ahead-right)]))
+             loc)
+         ;; No food found keep searching    
+			   (let [klrty (merge-with concat (rank-by checkPerCell placesz false))
+                   index (wrand [(if (:ant @ahead) 0 (klrty [(delta-loc loc (:dir ant)) (:dir ant)])) 
+		                         (klrty [(delta-loc loc (dec (:dir ant))) (:dir ant)])
+                             (klrty [(delta-loc loc (inc (:dir ant))) (:dir ant)])])]
+                   (([#(move % noPherDrop) #(turn % -1) #(turn % 1)] index) loc))))))))
+
+(defn TypeHaulerBehave
+    "The behavior function for the Hauler ant"
+	[loc ant]
+  (if (deref FoodReturned) 
+   (let [p (place loc)
+           ant (:ant @p)
+           ahead (place (delta-loc loc (:dir ant)))
+           ahead-left (place (delta-loc loc (dec (:dir ant))))
+           ahead-right (place (delta-loc loc (inc (:dir ant))))
+           places [ahead ahead-left ahead-right]	
+		       placesz [[(delta-loc loc (:dir ant)) (:dir ant)] [(delta-loc loc (dec (:dir ant))) (:dir ant)] [(delta-loc loc (inc (:dir ant))) (:dir ant)]]]
+      (if (:food ant)
+       ;going home
+      (cond 
+        (:home @p)                              
+          (-> loc drop-food (turn 4))
+        (and (:home @ahead) (not (:ant @ahead))) 
+          (move loc pherFoodDrop)
         :else
           (let [ranks (merge-with + 
-                                  (rank-by (comp :food deref) places)
-                                  (rank-by (comp :pher deref) places))]
-          (([move #(turn % -1) #(turn % 1)]
+                        (rank-by (comp #(if (:home %) 1 0) deref) places true)
+                        (rank-by (comp :pher deref) places true))]
+          (([#(move % pherFoodDrop) #(turn % -1) #(turn % 1)]
             (wrand [(if (:ant @ahead) 0 (ranks ahead)) 
                     (ranks ahead-left) (ranks ahead-right)]))
-           loc)))))
-)
-
-(defn TypeOneBehave
-    "The behavior function for the type 1 ant"
-	[loc ant]	
-	(println "Type one behave")
-)
+           loc)))
+     ;foraging
+      (cond 
+        (and (pos? (:food @p)) (not (:home @p))) 
+          (-> loc take-food (turn 4))
+        (and (pos? (:food @ahead)) (not (:home @ahead)) (not (:ant @ahead)))
+          (move loc pherFoodDrop)
+      :else
+       ;; Check if there is food nearby
+	   (let [foodCells (merge-with concat (rank-by (comp :food deref) places true))]
+			  (if (> (:food @(key (apply max-key val foodCells))) 0) 
+          ;; Food found go to it
+           (([#(move % 0) #(turn % -1) #(turn % 1)]
+				     (wrand [(if (:ant @ahead) 0 (foodCells ahead)) 
+                     (foodCells ahead-left) 
+                     (foodCells ahead-right)]))
+             loc)
+            ;; No food found keep searching    
+			    (let [pherCells (merge-with concat (rank-by checkPerCell placesz true))
+                   index (wrand [(if (:ant @ahead) 0 (pherCells [(delta-loc loc (:dir ant)) (:dir ant)])) 
+		                         (pherCells [(delta-loc loc (dec (:dir ant))) (:dir ant)])
+                             (pherCells [(delta-loc loc (inc (:dir ant))) (:dir ant)])])]
+                   (([#(move % noPherDrop) #(turn % -1) #(turn % 1)] index) loc)))))))
+    loc))
 
 (defn behave 
   "the main function for the ant agent"
-  [loc]
+  [loc]  
   (let [p (place loc)
         ant (:ant @p)]
-    (. Thread (sleep ant-sleep-ms))
-	(dosync
-     (when running
-       (send-off *agent* #'behave))
-	(if (= (:type ant) 1) (TypeOneBehave loc ant) (TypeZeroBehave loc ant))
-	)
-))
+    (. Thread (sleep ant-sleep-ms))   
+	  (dosync
+      (when running (send-off *agent* #'behave))
+	    (if (= (:type ant) 1) (TypeHaulerBehave loc ant) (TypeSeekerBehave loc ant)))))
 
 (defn evaporate 
   "causes all the pheromones to evaporate a bit"
@@ -276,7 +341,7 @@
     (doto g	
       (.setColor (cond
 					(:food ant) (new Color 255 0 0 255) 
-                    (= (:type ant) 1) (new Color 0 255 0 255)
+          (= (:type ant) 1) (new Color 0 255 0 255)
 					:else (new Color 0 0 255 255))				 
 				  )
       (.drawLine (+ hx (* x scale)) (+ hy (* y scale)) 
@@ -339,15 +404,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; use ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (comment
-;demo
+;;demo
 ;; (load-file "/Users/rich/dev/clojure/ants.clj")
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]  
+;;(defn -main
+ ;; "I don't do a whole lot ... yet."
+ ;; [& args]  
     (def ants (setup))
     (send-off animator animation)
     (dorun (map #(send-off % behave) ants))
-     (send-off evaporator evaporation)
-)
-
-;; )
+     (send-off evaporator evaporation)	 	
+;;)
