@@ -14,18 +14,6 @@
 #define MAX_TILE_SIDE_LENGTH 6
 #define THREADS_PER_BLOCK 256
 
-static void HandleError(cudaError_t err,
-	const char *file,
-	int line) {
-	if (err != cudaSuccess) {
-		printf("%s in %s at line %d\n", cudaGetErrorString(err),
-			file, line);
-		exit(EXIT_FAILURE);
-	}
-}
-#define HANDLE_ERROR( err ) (HandleError( err, __FILE__, __LINE__ ))
-
-
 __global__ void matrixMultKernel(float* Md, float* Nd, float* Pd, int Width, int TileWidth) 
 { 
 	extern __shared__ float shared[];
@@ -97,7 +85,7 @@ __global__ void sumReduceKernel(float* Md, float* Pd)
 
 	__syncthreads();
 
-	// Sum up everything
+	// Sum up everything for the block
 	while (offset != 0)
 	{
 		if (localIdx < offset) temp[localIdx] += temp[localIdx + offset];
@@ -235,26 +223,30 @@ float DotProduct(float* h_vectorA, float* h_vectorB, int vectorLength)
 
 bool testMatrix(float* MatrixA, float* MatrixB, float* Matrix, int matrixSideLength)
 {
+	// Generate test index
 	int idX = rand() % matrixSideLength;
 	int idY = rand() % matrixSideLength;
 
+	// Get test value from matrix
 	float testValue = Matrix[idX * matrixSideLength + idY];
 
+	// Allocate memory for vectors
 	float* h_vectorA = (float*)malloc(sizeof(float)* matrixSideLength);
 	float* h_vectorB = (float*)malloc(sizeof(float)* matrixSideLength);	
 
+	// Load row andf column into vectors
 	for (int i = 0; i < matrixSideLength; i++)
 	{
 		h_vectorA[i] = MatrixA[idX * matrixSideLength + i];
 		h_vectorB[i] = MatrixB[idY + matrixSideLength * i];
 	}
 
+	// Find the dot product
 	float dotProduct = DotProduct(h_vectorA, h_vectorB, matrixSideLength);
 
 	bool retValue = true;
 
 	std::cout << std::setw(11) << std::to_string(idX) + "," + std::to_string(idY) << std::setw(15) << testValue << std::setw(15) << dotProduct;
-	//printf("\tIndex to test=(%d,%d)\n\tMatrix Value=%4.10f\n\tDot Product Value=%4.10f\n", idX, idY, testValue, dotProduct);
 	if (EqaulWithTol(dotProduct, testValue))
 	{
 		std::cout << std::setw(10) << "Passed";
@@ -269,20 +261,6 @@ bool testMatrix(float* MatrixA, float* MatrixB, float* Matrix, int matrixSideLen
 	free(h_vectorB);
 
 	return retValue;
-}
-
-
-void PrintMatrix(float* matrix, int sideLength)
-{
-	printf("\n");
-	
-	for (int idx = 0; idx < sideLength * sideLength; idx++)
-	{
-		if (idx % sideLength == 0) printf("\n");
-		printf(" %3.6f", matrix[idx]);
-	}
-
-	printf("\n");
 }
 
 /////////////////////////////////////////////////////////// Program main /////////////////////////////////////////////////////////    
@@ -319,15 +297,18 @@ int main(int argc, char** argv)
 
 		for (int x = 0; x < MAX_TILE_SIDE_LENGTH; x++)	
 		{
+			// only run multiply where the tile size is smaller than the matrix size
 			if (x > i) break;
 
 			int tileSize = 1 << x;
 
-			memset(h_C, 0, mem_size);
-			//printf("*** N = %d  Tile Width = %d ***\n", matrixSideLength, tileSize);
+			// Print out configuration of this run
 			std::cout << std::setw(5) << matrixSideLength << std::setw(12) << tileSize;
+
+			memset(h_C, 0, mem_size);
 			float flops = MatrixMult(h_A, h_B, h_C, matrixSideLength, tileSize);
 
+			// Check if this run was faster than the fastest
 			if (flops > maxFlops && !std::isinf(flops))
 			{
 				maxFlops = flops;
@@ -335,8 +316,10 @@ int main(int argc, char** argv)
 				maxTile = tileSize;
 			}
 
+			// Test the result of the multiply
 			if (!testMatrix(h_A, h_B, h_C, matrixSideLength)) testFailed = true;
-			//printf("\n\n");
+
+			// start new row for table
 			std::cout << "\n";
 			
 		}
