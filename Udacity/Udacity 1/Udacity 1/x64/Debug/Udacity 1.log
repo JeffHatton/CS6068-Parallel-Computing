@@ -1,0 +1,81 @@
+﻿Build started 10/6/2015 2:01:19 PM.
+     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 1.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x86\vc11\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\x64" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 1.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 1.lib" /MACHINE:X64 x64\Debug\student_func.cu.obj
+         x64\Debug\compare.obj
+         x64\Debug\main.obj
+         x64\Debug\reference_calc.obj
+         C:\opencv\build\x86\vc12\lib\opencv_calib3d2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_calib3d2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_contrib2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_contrib2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_core2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_core2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_features2d2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_features2d2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_flann2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_flann2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_gpu2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_gpu2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_highgui2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_highgui2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_imgproc2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_imgproc2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_legacy2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_legacy2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ml2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ml2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_nonfree2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_nonfree2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_objdetect2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_objdetect2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ocl2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ocl2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_photo2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_photo2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_stitching2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_stitching2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_superres2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_superres2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ts2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_ts2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_video2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_video2411d.lib
+         C:\opencv\build\x86\vc12\lib\opencv_videostab2411.lib
+         C:\opencv\build\x86\vc12\lib\opencv_videostab2411d.lib
+     1>compare.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::Exception::Exception(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (??0Exception@cv@@QEAA@HAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00H@Z) referenced in function "public: unsigned char * __cdecl cv::Mat::ptr<unsigned char>(int)" (??$ptr@E@Mat@cv@@QEAAPEAEH@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "public: __cdecl cv::Exception::Exception(int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (??0Exception@cv@@QEAA@HAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@00H@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "public: virtual __cdecl cv::Exception::~Exception(void)" (??1Exception@cv@@UEAA@XZ) referenced in function "public: unsigned char * __cdecl cv::Mat::ptr<unsigned char>(int)" (??$ptr@E@Mat@cv@@QEAAPEAEH@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "public: virtual __cdecl cv::Exception::~Exception(void)" (??1Exception@cv@@UEAA@XZ)
+     1>compare.obj : error LNK2019: unresolved external symbol "void __cdecl cv::error(class cv::Exception const &)" (?error@cv@@YAXAEBVException@1@@Z) referenced in function "public: unsigned char * __cdecl cv::Mat::ptr<unsigned char>(int)" (??$ptr@E@Mat@cv@@QEAAPEAEH@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl cv::error(class cv::Exception const &)" (?error@cv@@YAXAEBVException@1@@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPEAX@Z) referenced in function "public: __cdecl cv::Mat::~Mat(void)" (??1Mat@cv@@QEAA@XZ)
+     1>main.obj : error LNK2001: unresolved external symbol "void __cdecl cv::fastFree(void *)" (?fastFree@cv@@YAXPEAX@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "public: __cdecl cv::_InputArray::_InputArray(class cv::Mat const &)" (??0_InputArray@cv@@QEAA@AEBVMat@1@@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::_OutputArray const & __cdecl cv::noArray(void)" (?noArray@cv@@YAAEBV_OutputArray@1@XZ) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "public: class cv::Mat __cdecl cv::Mat::reshape(int,int)const " (?reshape@Mat@cv@@QEBA?AV12@HH@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "public: void __cdecl cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QEAAXXZ) referenced in function "public: void __cdecl cv::Mat::release(void)" (?release@Mat@cv@@QEAAXXZ)
+     1>main.obj : error LNK2001: unresolved external symbol "public: void __cdecl cv::Mat::deallocate(void)" (?deallocate@Mat@cv@@QEAAXXZ)
+     1>compare.obj : error LNK2019: unresolved external symbol "public: void __cdecl cv::Mat::copySize(class cv::Mat const &)" (?copySize@Mat@cv@@QEAAXAEBV12@@Z) referenced in function "public: __cdecl cv::Mat::Mat(class cv::Mat const &)" (??0Mat@cv@@QEAA@AEBV01@@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "public: void __cdecl cv::Mat::copySize(class cv::Mat const &)" (?copySize@Mat@cv@@QEAAXAEBV12@@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "void __cdecl cv::minMaxLoc(class cv::_InputArray const &,double *,double *,class cv::Point_<int> *,class cv::Point_<int> *,class cv::_InputArray const &)" (?minMaxLoc@cv@@YAXAEBV_InputArray@1@PEAN1PEAV?$Point_@H@1@20@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "int __cdecl cv::_interlockedExchangeAdd(int *,int)" (?_interlockedExchangeAdd@cv@@YAHPEAHH@Z) referenced in function "public: __cdecl cv::Mat::Mat(class cv::Mat const &)" (??0Mat@cv@@QEAA@AEBV01@@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "int __cdecl cv::_interlockedExchangeAdd(int *,int)" (?_interlockedExchangeAdd@cv@@YAHPEAHH@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::MatExpr __cdecl cv::operator-(class cv::Mat const &,class cv::Mat const &)" (??Gcv@@YA?AVMatExpr@0@AEBVMat@0@0@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::MatExpr __cdecl cv::operator-(class cv::Mat const &,class cv::Scalar_<double> const &)" (??Gcv@@YA?AVMatExpr@0@AEBVMat@0@AEBV?$Scalar_@N@0@@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::MatExpr __cdecl cv::operator*(class cv::MatExpr const &,double)" (??Dcv@@YA?AVMatExpr@0@AEBV10@N@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::MatExpr __cdecl cv::abs(class cv::MatExpr const &)" (?abs@cv@@YA?AVMatExpr@1@AEBV21@@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "class cv::Mat __cdecl cv::imread(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (?imread@cv@@YA?AVMat@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "class cv::Mat __cdecl cv::imread(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,int)" (?imread@cv@@YA?AVMat@1@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@H@Z)
+     1>compare.obj : error LNK2019: unresolved external symbol "bool __cdecl cv::imwrite(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV_InputArray@1@AEBV?$vector@HV?$allocator@H@std@@@3@@Z) referenced in function "void __cdecl compareImages(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,bool,double,double)" (?compareImages@@YAXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@0_NNN@Z)
+     1>main.obj : error LNK2001: unresolved external symbol "bool __cdecl cv::imwrite(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &,class cv::_InputArray const &,class std::vector<int,class std::allocator<int> > const &)" (?imwrite@cv@@YA_NAEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@AEBV_InputArray@1@AEBV?$vector@HV?$allocator@H@std@@@3@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: __cdecl cv::_OutputArray::_OutputArray(class cv::Mat &)" (??0_OutputArray@cv@@QEAA@AEAVMat@1@@Z) referenced in function "void __cdecl preProcess(struct uchar4 * *,unsigned char * *,struct uchar4 * *,unsigned char * *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?preProcess@@YAXPEAPEAUuchar4@@PEAPEAE01AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "public: void __cdecl cv::Mat::create(int,int const *,int)" (?create@Mat@cv@@QEAAXHPEBHH@Z) referenced in function "public: void __cdecl cv::Mat::create(int,int,int)" (?create@Mat@cv@@QEAAXHHH@Z)
+     1>main.obj : error LNK2019: unresolved external symbol "void __cdecl cv::cvtColor(class cv::_InputArray const &,class cv::_OutputArray const &,int,int)" (?cvtColor@cv@@YAXAEBV_InputArray@1@AEBV_OutputArray@1@HH@Z) referenced in function "void __cdecl preProcess(struct uchar4 * *,unsigned char * *,struct uchar4 * *,unsigned char * *,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?preProcess@@YAXPEAPEAUuchar4@@PEAPEAE01AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+     1>G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 1.exe : fatal error LNK1120: 20 unresolved externals
+     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.47

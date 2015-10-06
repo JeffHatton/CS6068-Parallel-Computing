@@ -1,0 +1,336 @@
+The system is: Windows - 6.2.9200 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:01 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdC.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue CMakeCCompilerId.c
+  CMakeCCompilerId.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCCompilerId.obj
+  CompilerIdC.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdC\.\CompilerIdC.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_C_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:02.16
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
+
+The C compiler identification is MSVC, found in "G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/3.4.0-rc1/CompilerIdC/CompilerIdC.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler:  
+Build flags: 
+Id flags: 
+
+The output was:
+0
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:04 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "Debug\".
+  Creating directory "Debug\CompilerIdCXX.tlog\".
+InitializeBuildStatus:
+  Creating "Debug\CompilerIdCXX.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /nologo /W0 /WX- /Od /Oy- /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue CMakeCXXCompilerId.cpp
+  CMakeCXXCompilerId.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X86 /SAFESEH Debug\CMakeCXXCompilerId.obj
+  CompilerIdCXX.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdCXX\.\CompilerIdCXX.exe
+PostBuildEvent:
+  for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
+  :VCEnd
+  CMAKE_CXX_COMPILER=C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\cl.exe
+FinalizeBuildStatus:
+  Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
+  Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\3.4.0-rc1\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.81
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
+
+The CXX compiler identification is MSVC, found in "G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/3.4.0-rc1/CompilerIdCXX/CompilerIdCXX.exe"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_5c04c.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:05 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_5c04c.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_5c04c.dir\Debug\".
+  Creating directory "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_5c04c.dir\Debug\cmTC_5c04c.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_5c04c.dir\Debug\cmTC_5c04c.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c04c.dir\Debug\\" /Fd"cmTC_5c04c.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\testCCompiler.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5c04c.dir\Debug\\" /Fd"cmTC_5c04c.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\testCCompiler.c"
+  
+  testCCompiler.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_5c04c.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_5c04c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_5c04c.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTC_5c04c.dir\Debug\testCCompiler.obj
+  cmTC_5c04c.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_5c04c.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_5c04c.dir\Debug\cmTC_5c04c.tlog\unsuccessfulbuild".
+  Touching "cmTC_5c04c.dir\Debug\cmTC_5c04c.tlog\cmTC_5c04c.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_5c04c.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.09
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_c8846.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:06 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_c8846.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_c8846.dir\Debug\".
+  Creating directory "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_c8846.dir\Debug\cmTC_c8846.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_c8846.dir\Debug\cmTC_c8846.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8846.dir\Debug\\" /Fd"cmTC_c8846.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c8846.dir\Debug\\" /Fd"cmTC_c8846.dir\Debug\vc140.pdb" /Gd /TC /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCCompilerABI.c"
+  
+  CMakeCCompilerABI.c
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_c8846.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_c8846.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_c8846.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTC_c8846.dir\Debug\CMakeCCompilerABI.obj
+  cmTC_c8846.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_c8846.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_c8846.dir\Debug\cmTC_c8846.tlog\unsuccessfulbuild".
+  Touching "cmTC_c8846.dir\Debug\cmTC_c8846.tlog\cmTC_c8846.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_c8846.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.91
+
+
+Determining if the CXX compiler works passed with the following output:
+Change Dir: G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ced96.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:08 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_ced96.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_ced96.dir\Debug\".
+  Creating directory "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ced96.dir\Debug\cmTC_ced96.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_ced96.dir\Debug\cmTC_ced96.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ced96.dir\Debug\\" /Fd"cmTC_ced96.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ced96.dir\Debug\\" /Fd"cmTC_ced96.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\testCXXCompiler.cxx"
+  
+  testCXXCompiler.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_ced96.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_ced96.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_ced96.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTC_ced96.dir\Debug\testCXXCompiler.obj
+  cmTC_ced96.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_ced96.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_ced96.dir\Debug\cmTC_ced96.tlog\unsuccessfulbuild".
+  Touching "cmTC_ced96.dir\Debug\cmTC_ced96.tlog\cmTC_ced96.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_ced96.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:03.05
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_ee099.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:12 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_ee099.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_ee099.dir\Debug\".
+  Creating directory "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_ee099.dir\Debug\cmTC_ee099.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_ee099.dir\Debug\cmTC_ee099.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ee099.dir\Debug\\" /Fd"cmTC_ee099.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_ee099.dir\Debug\\" /Fd"cmTC_ee099.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXCompilerABI.cpp"
+  
+  CMakeCXXCompilerABI.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_ee099.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_ee099.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_ee099.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTC_ee099.dir\Debug\CMakeCXXCompilerABI.obj
+  cmTC_ee099.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_ee099.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_ee099.dir\Debug\cmTC_ee099.tlog\unsuccessfulbuild".
+  Touching "cmTC_ee099.dir\Debug\cmTC_ee099.tlog\cmTC_ee099.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_ee099.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.85
+
+
+
+
+Detecting CXX [] compiler features compiled with the following output:
+Change Dir: G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp
+
+Run Build Command:"C:/Program Files (x86)/MSBuild/14.0/bin/MSBuild.exe" "cmTC_239fe.vcxproj" "/p:Configuration=Debug" "/p:VisualStudioVersion=14.0"
+Microsoft (R) Build Engine version 14.0.23107.0
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Build started 10/6/2015 12:38:13 PM.
+Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_239fe.vcxproj" on node 1 (default targets).
+PrepareForBuild:
+  Creating directory "cmTC_239fe.dir\Debug\".
+  Creating directory "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\".
+  Creating directory "cmTC_239fe.dir\Debug\cmTC_239fe.tlog\".
+InitializeBuildStatus:
+  Creating "cmTC_239fe.dir\Debug\cmTC_239fe.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_239fe.dir\Debug\\" /Fd"cmTC_239fe.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\feature_tests.cxx"
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.00.23026 for x86
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  
+  cl /c /Zi /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_239fe.dir\Debug\\" /Fd"cmTC_239fe.dir\Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:queue "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\feature_tests.cxx"
+  
+  feature_tests.cxx
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:QUEUE /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_239fe.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_239fe.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/CMakeFiles/CMakeTmp/Debug/cmTC_239fe.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug cmTC_239fe.dir\Debug\feature_tests.obj
+  cmTC_239fe.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\Debug\cmTC_239fe.exe
+FinalizeBuildStatus:
+  Deleting file "cmTC_239fe.dir\Debug\cmTC_239fe.tlog\unsuccessfulbuild".
+  Touching "cmTC_239fe.dir\Debug\cmTC_239fe.tlog\cmTC_239fe.lastbuildstate".
+Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\CMakeFiles\CMakeTmp\cmTC_239fe.vcxproj" (default targets).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.82
+
+
+    Feature record: CXX_FEATURE:1cxx_alias_templates
+    Feature record: CXX_FEATURE:1cxx_alignas
+    Feature record: CXX_FEATURE:1cxx_alignof
+    Feature record: CXX_FEATURE:1cxx_attributes
+    Feature record: CXX_FEATURE:1cxx_attribute_deprecated
+    Feature record: CXX_FEATURE:1cxx_auto_type
+    Feature record: CXX_FEATURE:1cxx_binary_literals
+    Feature record: CXX_FEATURE:1cxx_constexpr
+    Feature record: CXX_FEATURE:1cxx_contextual_conversions
+    Feature record: CXX_FEATURE:1cxx_decltype
+    Feature record: CXX_FEATURE:1cxx_decltype_auto
+    Feature record: CXX_FEATURE:1cxx_default_function_template_args
+    Feature record: CXX_FEATURE:1cxx_defaulted_functions
+    Feature record: CXX_FEATURE:1cxx_defaulted_move_initializers
+    Feature record: CXX_FEATURE:1cxx_delegating_constructors
+    Feature record: CXX_FEATURE:1cxx_deleted_functions
+    Feature record: CXX_FEATURE:1cxx_digit_separators
+    Feature record: CXX_FEATURE:1cxx_enum_forward_declarations
+    Feature record: CXX_FEATURE:1cxx_explicit_conversions
+    Feature record: CXX_FEATURE:1cxx_extended_friend_declarations
+    Feature record: CXX_FEATURE:1cxx_extern_templates
+    Feature record: CXX_FEATURE:1cxx_final
+    Feature record: CXX_FEATURE:1cxx_func_identifier
+    Feature record: CXX_FEATURE:1cxx_generalized_initializers
+    Feature record: CXX_FEATURE:1cxx_generic_lambdas
+    Feature record: CXX_FEATURE:1cxx_inheriting_constructors
+    Feature record: CXX_FEATURE:1cxx_inline_namespaces
+    Feature record: CXX_FEATURE:1cxx_lambdas
+    Feature record: CXX_FEATURE:1cxx_lambda_init_captures
+    Feature record: CXX_FEATURE:1cxx_local_type_template_args
+    Feature record: CXX_FEATURE:1cxx_long_long_type
+    Feature record: CXX_FEATURE:1cxx_noexcept
+    Feature record: CXX_FEATURE:1cxx_nonstatic_member_init
+    Feature record: CXX_FEATURE:1cxx_nullptr
+    Feature record: CXX_FEATURE:1cxx_override
+    Feature record: CXX_FEATURE:1cxx_range_for
+    Feature record: CXX_FEATURE:1cxx_raw_string_literals
+    Feature record: CXX_FEATURE:1cxx_reference_qualified_functions
+    Feature record: CXX_FEATURE:1cxx_return_type_deduction
+    Feature record: CXX_FEATURE:1cxx_right_angle_brackets
+    Feature record: CXX_FEATURE:1cxx_rvalue_references
+    Feature record: CXX_FEATURE:1cxx_sizeof_member
+    Feature record: CXX_FEATURE:1cxx_static_assert
+    Feature record: CXX_FEATURE:1cxx_strong_enums
+    Feature record: CXX_FEATURE:1cxx_template_template_parameters
+    Feature record: CXX_FEATURE:1cxx_thread_local
+    Feature record: CXX_FEATURE:1cxx_trailing_return_types
+    Feature record: CXX_FEATURE:1cxx_unicode_literals
+    Feature record: CXX_FEATURE:1cxx_uniform_initialization
+    Feature record: CXX_FEATURE:1cxx_unrestricted_unions
+    Feature record: CXX_FEATURE:1cxx_user_literals
+    Feature record: CXX_FEATURE:1cxx_variadic_macros
+    Feature record: CXX_FEATURE:1cxx_variadic_templates
