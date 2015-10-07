@@ -38,46 +38,35 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
                        unsigned char* const greyImage,
                        int numRows, int numCols)
 {
-  //TODO
-  //Fill in the kernel to convert from color to greyscale
-  //the mapping from components of a uchar4 to RGBA is:
-  // .x -> R ; .y -> G ; .z -> B ; .w -> A
-  //
-  //The output (greyImage) at each pixel should be the result of
-  //applying the formula: output = .299f * R + .587f * G + .114f * B;
-  //Note: We will be ignoring the alpha channel for this conversion
+	// Get x and y coordinates
 	int idx = threadIdx.x + blockIdx.x * blockDim.x;
-	//idx += blockDim.x * gridDim.x;
 	int idy = threadIdx.y + blockIdx.y * blockDim.y;
-	//idy += blockDim.y * gridDim.y;
+
+	// Calculate the pixel id
 	int id = idx + idy * numCols;
 
+	// If the x or y coordinate is bigger than the number of columns or rows return as it 
+	// is out of the image
 	if (idx > numCols || idy > numRows) return;
 
+	// pull the pixel out of the array
 	uchar4 pixel = rgbaImage[id];
+
+	// Scale the pixel into grey scale
 	greyImage[id] = pixel.x * .299f + pixel.y * .587f + pixel.z *.114f;
-  //First create a mapping from the 2D block and grid locations
-  //to an absolute 2D location in the image, then use that to
-  //calculate a 1D offset
 }
 
 void your_rgba_to_greyscale(const uchar4 * const h_rgbaImage, uchar4 * const d_rgbaImage,
                             unsigned char* const d_greyImage, size_t numRows, size_t numCols)
 {
-  //You must fill in the correct sizes for the blockSize and gridSize
-  //currently only one block with one thread is being launched
-
 	int blockSi = 32;
 	int gridSizeCol =  std::ceil(numCols / 32.0f);
 	int gridSizeRows = std::ceil(numRows / 32.0f);
 
-	std::cout << numCols << " " << numRows << std::endl;
-	std::cout << gridSizeCol << " " << gridSizeRows << std::endl;
-
-  const dim3 blockSize(32, 32, 1);  //TODO
-  const dim3 gridSize(gridSizeCol, gridSizeRows, 1);  //TODO
-  rgba_to_greyscale<<<gridSize, blockSize>>>(d_rgbaImage, d_greyImage, numRows, numCols);
+	const dim3 blockSize(32, 32, 1);  //TODO
+	const dim3 gridSize(gridSizeCol, gridSizeRows, 1);  //TODO
+	rgba_to_greyscale<<<gridSize, blockSize>>>(d_rgbaImage, d_greyImage, numRows, numCols);
   
-  cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
+	cudaDeviceSynchronize(); checkCudaErrors(cudaGetLastError());
 
 }
