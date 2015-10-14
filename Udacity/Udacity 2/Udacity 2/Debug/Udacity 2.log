@@ -1,0 +1,27 @@
+﻿Build started 10/11/2015 9:52:28 PM.
+     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2\Udacity 2.vcxproj" on node 2 (Build target(s)).
+     1>AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2\student_func.cu" 
+       CudaBuild:
+         Compiling CUDA source file student_func.cu...
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp201f5e9832e34ffb81c17ee4c91cac0d.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2\student_func.cu"
+         
+         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir Debug -maxrregcount=0  --machine 32 --compile -cudart static  -g   -DWIN32 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2\student_func.cu" 
+         student_func.cu
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt compare.cpp HW2.cpp main.cpp reference_calc.cpp
+         reference_calc.cpp
+     1>g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 2\udacity 2\reference_calc.cpp(33): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+         main.cpp
+     1>g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 2\udacity 2\hw2.cpp(1): fatal error C1083: Cannot open include file: 'opencv2/core/core.hpp': No such file or directory
+         HW2.cpp
+     1>g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 2\udacity 2\hw2.cpp(1): fatal error C1083: Cannot open include file: 'opencv2/core/core.hpp': No such file or directory
+         compare.cpp
+     1>g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 2\udacity 2\compare.cpp(1): fatal error C1083: Cannot open include file: 'opencv2/core/core.hpp': No such file or directory
+         Generating Code...
+     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 2\Udacity 2\Udacity 2.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:10.96

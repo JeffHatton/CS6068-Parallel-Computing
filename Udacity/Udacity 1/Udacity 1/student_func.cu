@@ -47,7 +47,7 @@ void rgba_to_greyscale(const uchar4* const rgbaImage,
 
 	// If the x or y coordinate is bigger than the number of columns or rows return as it 
 	// is out of the image
-	if (idx > numCols || idy > numRows) return;
+	if (idx >= numCols || idy >= numRows) return;
 
 	// pull the pixel out of the array
 	uchar4 pixel = rgbaImage[id];

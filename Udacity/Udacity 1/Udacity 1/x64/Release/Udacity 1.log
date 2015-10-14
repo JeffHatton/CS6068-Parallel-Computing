@@ -1,10 +1,10 @@
-﻿Build started 10/7/2015 7:20:28 PM.
+﻿Build started 10/11/2015 11:41:31 PM.
      1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" on node 2 (Build target(s)).
      1>AddCudaCompileDeps:
          C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /DNDEBUG /D_CONSOLE /D_MBCS /IC:\opencv\build\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" 
        CudaBuild:
          Compiling CUDA source file student_func.cu...
-         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp316e1ae8bfa449f0a7ed12c0c357243a.cmd"
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp6133883c05034a86ad9b0396306bcef1.cmd"
          "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"     --keep-dir x64\Release -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD  " -o x64\Release\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu"
          
          G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"     --keep-dir x64\Release -maxrregcount=0  --machine 64 --compile -cudart static     -DWIN32 -DWIN64 -DNDEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /O2 /Zi  /MD  " -o x64\Release\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" 
@@ -34,4 +34,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.46
+Time Elapsed 00:00:10.78
