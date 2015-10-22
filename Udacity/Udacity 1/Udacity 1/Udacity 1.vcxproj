@@ -22,7 +22,6 @@
     <ClInclude Include="compare.h" />
     <ClInclude Include="reference_calc.h" />
     <ClInclude Include="timer.h" />
-    <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="compare.cpp" />

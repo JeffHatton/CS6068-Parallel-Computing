@@ -158,6 +158,7 @@ copy "$(CudaToolkitBinDir)\cudart*.dll" "$(OutDir)"</Command>
     <CudaCompile Include="student_func.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Udacity 1\utils.h" />
     <ClInclude Include="compare.h" />
     <ClInclude Include="reference_calc.h" />
     <ClInclude Include="timer.h" />

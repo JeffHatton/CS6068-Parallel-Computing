@@ -1,13 +1,45 @@
-﻿Build started 10/14/2015 7:34:26 PM.
-     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\Udacity 2.vcxproj" on node 2 (Clean target(s)).
-     1>CudaClean:
-         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp0e485602bfea41c8be2715a60ff020cd.cmd"
-         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\student_func.cu" -clean
+﻿Build started 10/21/2015 7:06:42 PM.
+     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\Udacity 2.vcxproj" on node 3 (Build target(s)).
+     1>AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /IC:\opencv\build\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\student_func.cu" 
+       CudaBuild:
+         Compiling CUDA source file student_func.cu...
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp1778f450a01a48829084694005777ba4.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\student_func.cu"
          
-         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\student_func.cu" -clean 
+         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\student_func.cu" 
          student_func.cu
-     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\Udacity 2.vcxproj" (Clean target(s)).
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(236): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(237): warning C4244: 'initializing' : conversion from 'float' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(242): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(253): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(261): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(269): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 2/student_func.cu(284): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\opencv\build\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /Zi /nologo /W3 /WX- /Od /D WIN32 /D WIN64 /D _DEBUG /D _CONSOLE /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt compare.cpp main.cpp reference_calc.cpp
+         reference_calc.cpp
+     1>reference_calc.cpp(33): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+         main.cpp
+     1>g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 1\udacity 2\HW2.cpp(109): warning C4267: 'argument' : conversion from 'size_t' to 'int', possible loss of data
+         compare.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\opencv\build\x64\vc12\lib /LIBPATH:"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\lib\x64" cudart.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib opencv_calib3d2411d.lib opencv_contrib2411d.lib opencv_core2411d.lib opencv_features2d2411d.lib opencv_flann2411d.lib opencv_gpu2411d.lib opencv_highgui2411d.lib opencv_imgproc2411d.lib opencv_legacy2411d.lib opencv_ml2411d.lib opencv_nonfree2411d.lib opencv_objdetect2411d.lib opencv_photo2411d.lib opencv_stitching2411d.lib opencv_superres2411d.lib opencv_ts2411d.lib opencv_video2411d.lib opencv_videostab2411d.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 2.lib" /MACHINE:X64 x64\Debug\student_func.cu.obj
+         x64\Debug\compare.obj
+         x64\Debug\main.obj
+         x64\Debug\reference_calc.obj
+         Udacity 2.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 2.exe
+       PostBuildEvent:
+         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
+         :VCEnd
+         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
+         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
+                 2 file(s) copied.
+     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 2\Udacity 2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.63
+Time Elapsed 00:00:10.79

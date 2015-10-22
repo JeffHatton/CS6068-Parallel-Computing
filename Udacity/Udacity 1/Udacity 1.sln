@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Udacity 1", "Udacity 1\Udac
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Udacity 2", "Udacity 2\Udacity 2.vcxproj", "{455A0F74-D4ED-4E8C-B8D4-CE897AEBB743}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Udacity 3", "Udacity 3\Udacity 3.vcxproj", "{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -31,6 +33,14 @@ Global
 		{455A0F74-D4ED-4E8C-B8D4-CE897AEBB743}.Release|Win32.Build.0 = Release|Win32
 		{455A0F74-D4ED-4E8C-B8D4-CE897AEBB743}.Release|x64.ActiveCfg = Release|x64
 		{455A0F74-D4ED-4E8C-B8D4-CE897AEBB743}.Release|x64.Build.0 = Release|x64
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Debug|Win32.Build.0 = Debug|Win32
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Debug|x64.ActiveCfg = Debug|x64
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Debug|x64.Build.0 = Debug|x64
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Release|Win32.ActiveCfg = Release|Win32
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Release|Win32.Build.0 = Release|Win32
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Release|x64.ActiveCfg = Release|x64
+		{8DE47E0C-E39B-4A8D-B2AB-1AC77F742E42}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
