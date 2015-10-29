@@ -1,17 +1,26 @@
-﻿Build started 10/21/2015 7:06:42 PM.
-     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" on node 2 (Build target(s)).
-     1>Link:
-         Udacity 1.vcxproj -> G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\Udacity 1.exe
-       PostBuildEvent:
-         echo copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
-         :VCEnd
-         copy "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart*.dll" "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\x64\Debug\"
-         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart32_70.dll
-         C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\cudart64_70.dll
-                 2 file(s) copied.
-     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" (Build target(s)).
+﻿Build started 10/28/2015 7:05:44 PM.
+     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" on node 2 (Rebuild target(s)).
+     1>CudaClean:
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp497f4a8f27954d5980d7359564f3fc58.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" -clean
+         
+         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile   -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" -clean 
+         student_func.cu
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /IC:\opencv\build\include /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" 
+       CudaBuild:
+         Compiling CUDA source file student_func.cu...
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp70e2d97db5754f79bb0519533086b0c8.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu"
+         
+         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu" 
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 1/student_func.cu(62): warning : variable "blockSi" was declared but never referenced
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 1/student_func.cu(62): warning : variable "blockSi" was declared but never referenced
+         student_func.cu
+     1>C:/Users/Jeff/AppData/Local/Temp/tmpxft_00003034_00000000-20_student_func.ii : fatal error C1041: cannot open program database 'g:\files\programs\git\cs6068-parallel-computing\udacity\udacity 1\udacity 1\vc120.pdb'; if multiple CL.EXE write to the same .PDB file, please use /FS
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.0.targets(593,9): error MSB3721: The command ""C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -IC:\opencv\build\include -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\student_func.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\student_func.cu"" exited with code 2.
+     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 1\Udacity 1.vcxproj" (Rebuild target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:00.67
+Time Elapsed 00:00:14.79
