@@ -1,0 +1,26 @@
+﻿Build started 12/9/2015 7:06:41 PM.
+     1>Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\Udacity 5.vcxproj" on node 2 (Build target(s)).
+     1>AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\main.cu" 
+       AddCudaCompileDeps:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\cl.exe /E /nologo /showIncludes /TP /D__CUDACC__ /DWIN32 /DWIN64 /D_DEBUG /D_CONSOLE /D_MBCS /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin" /I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" /I. /FIcuda_runtime.h /c "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\student.cu" 
+       CudaBuild:
+         Compiling CUDA source file main.cu...
+         cmd.exe /C "C:\Users\Jeff\AppData\Local\Temp\tmp93a9db5a1dc243d1a1788615ee5efcf5.cmd"
+         "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\main.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\main.cu"
+         
+         G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5>"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\main.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\main.cu" 
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(54): error : name followed by "::" must be a class or namespace name
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(54): error : expected an identifier
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(54): error : expected a ";"
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(58): error : namespace "std" has no member "min"
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(58): error : namespace "std" has no member "max"
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(58): error : identifier "normalDist" is undefined
+     1>G:/Files/Programs/Git/CS6068-Parallel-Computing/Udacity/Udacity 1/Udacity 5/main.cu(29): warning : variable "stddev" was declared but never referenced
+         main.cu
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\BuildCustomizations\CUDA 7.0.targets(593,9): error MSB3721: The command ""C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\bin\nvcc.exe" -gencode=arch=compute_20,code=\"sm_20,compute_20\" --use-local-env --cl-version 2013 -ccbin "C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64"  -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include" -I"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.0\include"  -G   --keep-dir x64\Debug -maxrregcount=0  --machine 64 --compile -cudart static  -g   -DWIN32 -DWIN64 -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler "/EHsc /W3 /nologo /Od /Zi /RTC1 /MDd  " -o x64\Debug\main.cu.obj "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\main.cu"" exited with code 2.
+     1>Done Building Project "G:\Files\Programs\Git\CS6068-Parallel-Computing\Udacity\Udacity 1\Udacity 5\Udacity 5.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.34
